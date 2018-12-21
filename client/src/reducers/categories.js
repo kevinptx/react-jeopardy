@@ -7,11 +7,12 @@ const DELETE_CATEGORY = "DELETE_CATEGORY";
 
 // REDUX ACTIONS
 
-export const getCategories = () => {
+export const getCategories = cb => {
   return dispatch => {
     axios
       .get("/api/categories")
-      .then(res => dispatch({ type: CATEGORIES, categories: res.data }));
+      .then(res => dispatch({ type: CATEGORIES, categories: res.data }))
+      .then(cb());
   };
 };
 
