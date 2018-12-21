@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Home from "./components/Home";
 import NoMatch from "./components/NoMatch";
-import FetchCategories from "./components/FetchCategories";
+import Categories from "./components/Categories";
 import Navbar from "./components/Navbar";
 import { Container } from "semantic-ui-react";
 import { Route, Switch } from "react-router-dom";
@@ -12,7 +12,7 @@ const App = () => (
     <Container>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/categories" component={FetchCategories} />
+        <Route path="/categories" component={Categories} />
         <Route component={NoMatch} />
       </Switch>
     </Container>
